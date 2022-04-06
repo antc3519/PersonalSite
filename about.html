@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="./main.css" />
+        <script type="text/javascript" src="main.js"></script>
+        <meta charset="utf-8" />
+        <title>About Me</title>
+        <style>
+            ::-webkit-scrollbar {
+                width: 25px;
+                height: 12px;
+                color: lightgrey;
+            }
+
+            ::-webkit-scrollbar-track {
+                color: black;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #cacaca;
+                border-right: 5px solid grey;
+                border-bottom: 4px solid grey;
+            }
+        </style>
+    </head>
+    <body onload="loaded()" style="overflow-x:hidden;overflow-y:hidden">
+
+        <header>
+            <div class="transition" id="transition" style="clip-path:circle(0% at 0% 0%)"></div>
+            <div class="transition" id="transition2" style="clip-path:circle(150% at 100% 100%)"></div>
+            <div class="navBar">
+                <ul onmouseover="navBlur(true)" onmouseout="navBlur(false)">
+                    <li><a href="javascript:delay('index.html')">Home</a></li>
+                    <li><a href="javascript:delay('#')">About</a></li>
+                    <li><a href="javascript:delay('travel.html')">Travels</a></li>
+                    <li>
+                        <span>
+                            <a href="javascript:delay('#')">Projects</a>
+                            <a class="subMenu" target="_blank" href="javascript:delay('./img/AnthonyCaruso.pdf')">Resume</a>
+                            <a class="subMenu subMenuBottom"  href="javascript:delay('projects.html')">Showcase</a>
+                        </span>
+                    </li>
+                    <li><a href="javascript:delay('contacts.html')">Contacts</a></li>
+                </ul>
+            </div>
+            <span id="shadow"></span>
+        </header>
+
+        <audio id="sound1" src="./img/minecraft_click.mp3" preload="auto"></audio>
+
+        <div class="about" id="main">
+            <div class="title">
+                <div>
+                    <img src="./img/About-Me.png" />
+                    <div class="subText">
+                        <h2 class="subText">I love minecraft!</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div id="ui">
+                    <div onclick="aboutMenu('main','me')" class="minecraftButton">
+                        <img class="menuButton" src="./img/MinecraftButton.JPG" />
+                        <p class="centered">Everything Me</p>
+                    </div>
+                    <div onclick="aboutMenu('main','extra')" class="minecraftButton">
+                        <img class="menuButton" src="./img/MinecraftButton.JPG" />
+                        <p class="centered">Extracurriculars</p>
+                    </div>
+                    <div onclick="aboutMenu('main','timeline')" class="minecraftButton">
+                        <img class="menuButton" src="./img/MinecraftButton.JPG" />
+                        <p class="centered">My Timeline</p>
+                    </div>
+
+                    <section>
+                        <div onclick="aboutMenu('main','gallery')" class="minecraftButton">
+                            <img class="halfButton" src="./img/MinecraftHalfButton.JPG" />
+                            <p class="centered">Gallery</p>
+                        </div>
+                        <span style="width:23px;"></span>
+                        <a href="./img/AnthonyCaruso.pdf" target="_blank" class="minecraftButton">
+                            <img class="halfButton" src="./img/MinecraftHalfButton.JPG" />
+                            <p class="centered">Resume (pdf)</p>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="subAbout" id="me">
+            <div class="topBar"><p class="centered" style="top:60%; font-size:2em">Everything Me</p></div>
+
+            <div class="container">
+                <div class="content">
+                    <center><img src="./img/PersonalPicture.jpg" /></center>
+                    <h1 class="infoBox"><bold style="color:white">Hello</bold> <br /> My name is Anthony Caruso <br /> I am a Senior at Brick Memorial High School</h1>
+                    <h1 class="infoBox"><bold style="color:white">I am 17 years old</bold> <br /> And I live with my parents and brother <br /> Alongside my adorable dog Bowie </h1>
+                    <h1 class="infoBox"><bold style="color:white">My family is always moving</bold> <br /> We usually spend our Summers traveling <br /> So far we have visited about 10 countries</h1>
+                    <h1 class="infoBox"><bold style="color:white">When we aren't away</bold> <br /> Usually you can find me either<br /> At the bowling alley or out with my friends</h1>
+                    <h1 class="infoBox"><bold style="color:white">Among other things</bold> <br /> I am the Varsity Bowling Team's Captain<br /> We were close to being New Jersey State Champions 3 times</h1>
+                    <h1 class="infoBox"><bold style="color:white">During the school year</bold> <br /> I work very hard and keep straight A's<br /> I have completed 4 AP classes and am taking 3 more</h1>
+                    <h1 class="infoBox"><bold style="color:white">In the future</bold> <br /> I want to work as a Computer Engineer<br /> I love coding and had a great time making this website!</h1>
+                    <h1 class="infoBox"><bold style="color:white">Outside of Coding and Bowling</bold> <br /> I love reading and playing Minecraft<br /> As long as I'm creating or imagining, I am happy</h1>
+                    <h1 class="infoBox"><bold style="color:white">Creative freedom is why I joined the STEM Program</bold> <br /> My school lets me take engineering classes<br /> And I get to enjoy designing things</h1>
+
+                </div>
+            </div>
+
+            <div class="bottomBar">
+                <center>
+                    <div onclick="aboutMenu('me','main')" class="minecraftButton" style="margin-top:70px">
+                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <p class="centered">Back</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <div class="subAbout" id="extra">
+            <div class="topBar"><p class="centered" style="top:60%; font-size:2em">Extracurriculars</p></div>
+
+            <div class="container">
+                <div class="content">
+                    <center style="margin:10px;">
+                        <div style="margin-bottom:25px;">
+                            <img src="./img/keyclub.png" />
+                            <h1>KEY CLUB</h1>
+                            <p>
+                                I have been a member of Key Club every year I have been in High School. For my Freshman and Sophomore years I was a regular member of the club, however I attended almost every service event my club offered acculumating over 120 hours.
+                                Junior year my experience was mostly the same, but halfway through I ran for the New Jersey District board as Webmaster (after applying the year before). My girlfriend convinced me to join and now we both work as members of that board, managing every club in the state.
+                                As webmaster I have maintained the website (applying to this position inspired me to learn website design and HTML) and worked on committees as the Member Recognition Chair! Many people will say, "Key Club changed my life for the better" and I fit right in there,
+                                without Key Club I would not have done any community service nor would I have ever learned coding to the degree I do now, and therefore would not have persued computer science as I do now!
+                            </p>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <img src="./img/Team.jpeg" />
+                            <h1>BOWLING</h1>
+                            <p>
+                                It might not be as glorified as football or baseball, however one of, if not my proudest, achievements is becoming the Varsity Captain for my school. I started playing the sport around 4th grade and ever since have considered it my most enjoyable hobby.
+                                When I started I did not even know it was possible to keep the ball out of the gutter but after spending countless hours practicing I improved to being one of the better bowlers in the state! I have participated in a lot of tournaments through and apart from my school's team; winning a couple of individual and team tournaments.
+                                In 2018 my family and I took a road trip to Dallas after I qualified for the National Junior Gold Tournament which was a huge learning experience (and a fun excuse to visit Texas). All of these experiences helped me get my Varsity letter Freshman year, and this season the captain of the team as the most experienced member.
+                                As captain I organized summer practices and managed the 15 players on our team when our coach was not present.
+                            </p>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <img src="./img/STEMLogo.JPG" />
+                            <h1>STEM ACADEMY</h1>
+                            <p>
+                                While the STEM academy might be to broad to consider an extracurricular, I spend a lot of time outside of school doing projects and working with teachers and other students because of it. The STEM Academy, in general has taught me a lot about leadership and learning how to do new things; Without it I would have never become
+                                interested in CAD modeling, or even programming as I learned it for a project we did. Outside of classes, STEM has provided me a lot of volunteer work and recently a paid job working with the tech department! I owe a lot to my program and am glad to be a part of it!
+                            </p>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <img src="./img/Kickboxing.JPG" style="max-height: 100px; max-width: 100%; min-height: 100px;"/>
+                            <h1>Muay Thai Kickboxing</h1>
+                            <p>
+                                Ever since fourth grade I have been enrolled in a local gym practicing Muay Thai. While originally I hated the classes (I wasn't in the best shape), I started to enjoy exercising and have learned how to defend myself in the meantime. Over the past 8 years, I rigorously worked
+                                and in 2018 I became a black armband, which is hard to accomplish considering the amount of effort and determination you have to put it. Overall, taking these classes has put me in very good shape and has taught me persistance, mentally and physically.
+                            </p>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <img src="./img/TSALogo.png" />
+                            <h1>TECNOLOGICAL STUDENT ASSOCIATION</h1>
+                            <p>
+                                My Freshman year, TSA was a new club started for the STEM students to compete in various competitions. The first competition I competed in was Video Game Design, and the challenge was to design and create a sport game. My group and I designed our around skiing and by all means, it was pretty bad, but that was my first time
+                                using Unity or coding in general so it was a perfect learning experience. The next year I joined Board Game Design where I helped to make "King of the Hill" a fantasy monopoly-like game. Sadly we did not place for that event either, however last year through the chaos with Quarantine I finally had some success! Originally I
+                                was making a second video game, named Tripartite (it was Olympic Themed and mostly completed), but we couldn't submit it because the convention got canceled so instead I jumped onto webmaster, one of the few competitions being offered still, and won 3rd place in the state! Designing the Faraday Motors website was one of my
+                                prouder accomplishments, especially because I created it (for the most part) within the 3 days before the deadline on top of schoolwork. While I was sad my video game could not be used, I was overjoyed that my website placed!
+                            </p>
+                        </div>
+                    </center>
+                </div>
+            </div>
+
+            <div class="bottomBar">
+                <center>
+                    <div onclick="aboutMenu('extra','main')" class="minecraftButton" style="margin-top:70px">
+                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <p class="centered">Back</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <div class="subAbout" id="timeline">
+            <div class="topBar"><p class="centered" style="top:60%; font-size:2em">My Timeline</p></div>
+
+            <div class="container">
+                <div class="content">
+                    <center style="margin:10px; height:1000px">
+                        <div style="margin: 0; position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+                            <h2>Under Construction</h2>
+                        </div>
+                    </center>
+                </div>
+            </div>
+
+            <div class="bottomBar">
+                <center>
+                    <div onclick="aboutMenu('timeline','main')" class="minecraftButton" style="margin-top:70px">
+                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <p class="centered">Back</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+
+        <div class="subAbout" id="gallery">
+            <div class="topBar"><p class="centered" style="top:60%; font-size:2em">Gallery</p></div>
+
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="column">
+                            <img src="./img/PersonalPicture.jpg">
+                            <img src="./img/gallery/4.JPG">
+                            <img src="./img/gallery/8.jpg">
+                            <img src="./img/gallery/12.jpeg">
+                            <img src="./img/gallery/20.jpg">
+                            <img src="./img/gallery/24.jpg">
+                            <img src="./img/gallery/28.jpg">
+                        </div>
+                        <div class="column">
+                            <img src="./img/gallery/1.jpg">
+                            <img src="./img/gallery/5.jpeg">
+                            <img src="./img/gallery/9.jpeg">
+                            <img src="./img/gallery/13.jpeg">
+                            <img src="./img/gallery/17.jpg">
+                            <img src="./img/gallery/21.jpg">
+                            <img src="./img/gallery/25.jpg">
+                        </div>
+                        <div class="column">
+                            <img src="./img/gallery/2.jpg">
+                            <img src="./img/gallery/6.jpeg">
+                            <img src="./img/gallery/10.jpeg">
+                            <img src="./img/gallery/14.png">
+                            <img src="./img/gallery/16.jpg">
+                            <img src="./img/gallery/18.jpeg">
+                            <img src="./img/gallery/22.jpg">
+                            <img src="./img/gallery/26.jpg">
+                            <img src="./img/gallery/30.jpg">
+                        </div>
+                        <div class="column">
+                            <img src="./img/gallery/3.jpeg">
+                            <img src="./img/gallery/7.jpeg">
+                            <img src="./img/gallery/11.jpeg">
+                            <img src="./img/gallery/15.jpg">
+                            <img src="./img/gallery/19.jpg">
+                            <img src="./img/gallery/23.jpg">
+                            <img src="./img/gallery/27.jpg">
+                            <img src="./img/gallery/31.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomBar">
+                <center>
+                    <div onclick="aboutMenu('gallery','main')" class="minecraftButton" style="margin-top:70px">
+                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <p class="centered">Back</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </body>
+</html>

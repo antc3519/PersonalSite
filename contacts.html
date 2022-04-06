@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="./main.css" />
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body onload="loaded()" class="contact">
+
+        <header class="inverse">
+            <div class="transition" id="transition" style="clip-path:circle(0% at 0% 0%)"></div>
+            <div class="transition" id="transition2" style="clip-path:circle(150% at 100% 100%)"></div>
+            <div class="navBar">
+                <ul onmouseover="navBlur(true)" onmouseout="navBlur(false)">
+                    <li><a href="javascript:delay('index.html')">Home</a></li>
+                    <li><a href="javascript:delay('about.html')">About</a></li>
+                    <li><a href="javascript:delay('travel.html')">Travels</a></li>
+                    <li>
+                        <span>
+                            <a href="javascript:delay('#')">Projects</a>
+                            <a class="subMenu" target="_blank" href="javascript:delay('./img/AnthonyCaruso.pdf')">Resume</a>
+                            <a class="subMenu subMenuBottom"  href="javascript:delay('projects.html')">Showcase</a>
+                        </span>
+                    </li>
+                    <li><a href="javascript:delay('#')">Contacts</a></li>
+                </ul>
+            </div>
+            <span id="shadow"></span>
+        </header>
+
+        <div class="contactCard">
+            <div class="banner">
+                <div class="avatar"></div>
+            </div>
+            <h3>Anthony Caruso</h3>
+            <a href="mailto:anth3519@gmail.com">📧 anth3519@gmail.com</a>
+            <a href="">📱 (732) 664 5613</a>
+            <a href="">557 California Ave. Brick, NJ</a>
+            <ul>
+                <a href="#" target="_blank"><i class="fa fa-instagram" style="font-size:16px"></i></a>
+            </ul>
+        </div>
+
+    </body>
+</html>

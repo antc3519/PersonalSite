@@ -1,0 +1,16 @@
+.home {
+    height: 100vh;
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/44bebac7-4258-436a-a2e6-ca39966cd2b2/d1wi3ag-75d6940c-cb75-475f-ac26-2cfcd3f6f660.jpg/v1/fill/w_1600,h_1200,q_75,strp/paris_winter_skyline_by_davidhenocq-d1wi3ag.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi80NGJlYmFjNy00MjU4LTQzNmEtYTJlNi1jYTM5OTY2Y2QyYjIvZDF3aTNhZy03NWQ2OTQwYy1jYjc1LTQ3NWYtYWMyNi0yY2ZjZDNmNmY2NjAuanBnIiwid2lkdGgiOiI8PTE2MDAiLCJoZWlnaHQiOiI8PTEyMDAifV1dfQ.yflX0bZe9pllsjvCRtyZcznfh-Dasoztgs5J3XQ9ckw);
+    background-size: cover;
+    margin: 0;
+}
+.home svg{
+    min-width:320px;
+    max-width:600px;
+    min-height:80px;
+    max-height:150px;
+}

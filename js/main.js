@@ -44,7 +44,7 @@ function navBlur(state) {
     var shadow = document.getElementById("shadow");
     if(state == true) {
 
-        shadow.style.opacity = "0.6";
+        shadow.style.opacity = "0.8";
     }
     else
         shadow.style.opacity = "0.0";

@@ -1,58 +1,53 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <!--DEVELOPER: Anthony Caruso, IS117-102, Spring 2022-->
+
     <head>
-        <link rel="stylesheet" href="./main.css" />
-        <script type="text/javascript" src="main.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="../extra/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../extra/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../extra/favicon/favicon-16x16.png">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/home.css" />
+        <script type="text/javascript" src="../js/main.js"></script>
+
         <meta charset="utf-8" />
-        <title>About Me</title>
-        <style>
-            ::-webkit-scrollbar {
-                width: 25px;
-                height: 12px;
-                color: lightgrey;
-            }
+        <title>About</title>
 
-            ::-webkit-scrollbar-track {
-                color: black;
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background: #cacaca;
-                border-right: 5px solid grey;
-                border-bottom: 4px solid grey;
-            }
-        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+              crossorigin="anonymous">
     </head>
     <body onload="loaded()" style="overflow-x:hidden;overflow-y:hidden">
-
         <header>
-            <div class="transition" id="transition" style="clip-path:circle(0% at 0% 0%)"></div>
-            <div class="transition" id="transition2" style="clip-path:circle(150% at 100% 100%)"></div>
+            <div class="transition" id="transition"></div>
+            <div class="transition" id="transition2" style="clip-path:circle(150% at 100% 100%); opacity:1;"></div>
             <div class="navBar">
                 <ul onmouseover="navBlur(true)" onmouseout="navBlur(false)">
-                    <li><a href="javascript:delay('index.html')">Home</a></li>
-                    <li><a href="javascript:delay('#')">About</a></li>
+                    <li><a href="javascript:delay('../index.html')">Home</a></li>
+                    <li><a href="javascript:delay('about.html')">About</a></li>
                     <li><a href="javascript:delay('travel.html')">Travels</a></li>
                     <li>
                         <span>
                             <a href="javascript:delay('#')">Projects</a>
-                            <a class="subMenu" target="_blank" href="javascript:delay('./img/AnthonyCaruso.pdf')">Resume</a>
-                            <a class="subMenu subMenuBottom"  href="javascript:delay('projects.html')">Showcase</a>
+                            <a class="subMenu" target="_blank" href="../extra/AnthonyCaruso.pdf">Resume</a>
+                            <a class="subMenu subMenuBottom" target="_blank" href="https://github.com/antc3519">GitHub</a>
                         </span>
                     </li>
                     <li><a href="javascript:delay('contacts.html')">Contacts</a></li>
                 </ul>
+                <span id="shadow"></span>
             </div>
-            <span id="shadow"></span>
         </header>
+        <main>
 
-        <audio id="sound1" src="./img/minecraft_click.mp3" preload="auto"></audio>
-
+        </main>
         <div class="about" id="main">
             <div class="title">
                 <div>
-                    <img src="./img/About-Me.png" />
+                    <img src="../img/About-Me.png" />
                     <div class="subText">
                         <h2 class="subText">I love minecraft!</h2>
                     </div>
@@ -61,26 +56,26 @@
             <div class="menu">
                 <div id="ui">
                     <div onclick="aboutMenu('main','me')" class="minecraftButton">
-                        <img class="menuButton" src="./img/MinecraftButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftButton.JPG" />
                         <p class="centered">Everything Me</p>
                     </div>
                     <div onclick="aboutMenu('main','extra')" class="minecraftButton">
-                        <img class="menuButton" src="./img/MinecraftButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftButton.JPG" />
                         <p class="centered">Extracurriculars</p>
                     </div>
                     <div onclick="aboutMenu('main','timeline')" class="minecraftButton">
-                        <img class="menuButton" src="./img/MinecraftButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftButton.JPG" />
                         <p class="centered">My Timeline</p>
                     </div>
 
                     <section>
                         <div onclick="aboutMenu('main','gallery')" class="minecraftButton">
-                            <img class="halfButton" src="./img/MinecraftHalfButton.JPG" />
+                            <img class="halfButton" src="../img/MinecraftHalfButton.JPG" />
                             <p class="centered">Gallery</p>
                         </div>
                         <span style="width:23px;"></span>
-                        <a href="./img/AnthonyCaruso.pdf" target="_blank" class="minecraftButton">
-                            <img class="halfButton" src="./img/MinecraftHalfButton.JPG" />
+                        <a href="../extra/AnthonyCaruso.pdf" target="_blank" class="minecraftButton">
+                            <img class="halfButton" src="../img/MinecraftHalfButton.JPG" />
                             <p class="centered">Resume (pdf)</p>
                         </a>
                     </section>
@@ -93,7 +88,7 @@
 
             <div class="container">
                 <div class="content">
-                    <center><img src="./img/PersonalPicture.jpg" /></center>
+                    <center><img src="../img/PersonalPicture.jpg" /></center>
                     <h1 class="infoBox"><bold style="color:white">Hello</bold> <br /> My name is Anthony Caruso <br /> I am a Senior at Brick Memorial High School</h1>
                     <h1 class="infoBox"><bold style="color:white">I am 17 years old</bold> <br /> And I live with my parents and brother <br /> Alongside my adorable dog Bowie </h1>
                     <h1 class="infoBox"><bold style="color:white">My family is always moving</bold> <br /> We usually spend our Summers traveling <br /> So far we have visited about 10 countries</h1>
@@ -110,7 +105,7 @@
             <div class="bottomBar">
                 <center>
                     <div onclick="aboutMenu('me','main')" class="minecraftButton" style="margin-top:70px">
-                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftHalfButton.JPG" />
                         <p class="centered">Back</p>
                     </div>
                 </center>
@@ -124,7 +119,7 @@
                 <div class="content">
                     <center style="margin:10px;">
                         <div style="margin-bottom:25px;">
-                            <img src="./img/keyclub.png" />
+                            <img src="../img/keyclub.png" />
                             <h1>KEY CLUB</h1>
                             <p>
                                 I have been a member of Key Club every year I have been in High School. For my Freshman and Sophomore years I was a regular member of the club, however I attended almost every service event my club offered acculumating over 120 hours.
@@ -134,7 +129,7 @@
                             </p>
                         </div>
                         <div style="margin-bottom:25px;">
-                            <img src="./img/Team.jpeg" />
+                            <img src="../img/Team.jpeg" />
                             <h1>BOWLING</h1>
                             <p>
                                 It might not be as glorified as football or baseball, however one of, if not my proudest, achievements is becoming the Varsity Captain for my school. I started playing the sport around 4th grade and ever since have considered it my most enjoyable hobby.
@@ -144,7 +139,7 @@
                             </p>
                         </div>
                         <div style="margin-bottom:25px;">
-                            <img src="./img/STEMLogo.JPG" />
+                            <img src="../img/STEMLogo.JPG" />
                             <h1>STEM ACADEMY</h1>
                             <p>
                                 While the STEM academy might be to broad to consider an extracurricular, I spend a lot of time outside of school doing projects and working with teachers and other students because of it. The STEM Academy, in general has taught me a lot about leadership and learning how to do new things; Without it I would have never become
@@ -152,7 +147,7 @@
                             </p>
                         </div>
                         <div style="margin-bottom:25px;">
-                            <img src="./img/Kickboxing.JPG" style="max-height: 100px; max-width: 100%; min-height: 100px;"/>
+                            <img src="../img/Kickboxing.JPG" style="max-height: 100px; max-width: 100%; min-height: 100px;"/>
                             <h1>Muay Thai Kickboxing</h1>
                             <p>
                                 Ever since fourth grade I have been enrolled in a local gym practicing Muay Thai. While originally I hated the classes (I wasn't in the best shape), I started to enjoy exercising and have learned how to defend myself in the meantime. Over the past 8 years, I rigorously worked
@@ -160,7 +155,7 @@
                             </p>
                         </div>
                         <div style="margin-bottom:25px;">
-                            <img src="./img/TSALogo.png" />
+                            <img src="../img/TSALogo.png" />
                             <h1>TECNOLOGICAL STUDENT ASSOCIATION</h1>
                             <p>
                                 My Freshman year, TSA was a new club started for the STEM students to compete in various competitions. The first competition I competed in was Video Game Design, and the challenge was to design and create a sport game. My group and I designed our around skiing and by all means, it was pretty bad, but that was my first time
@@ -176,7 +171,7 @@
             <div class="bottomBar">
                 <center>
                     <div onclick="aboutMenu('extra','main')" class="minecraftButton" style="margin-top:70px">
-                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftHalfButton.JPG" />
                         <p class="centered">Back</p>
                     </div>
                 </center>
@@ -199,7 +194,7 @@
             <div class="bottomBar">
                 <center>
                     <div onclick="aboutMenu('timeline','main')" class="minecraftButton" style="margin-top:70px">
-                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftHalfButton.JPG" />
                         <p class="centered">Back</p>
                     </div>
                 </center>
@@ -213,43 +208,43 @@
                 <div class="content">
                     <div class="row">
                         <div class="column">
-                            <img src="./img/PersonalPicture.jpg">
-                            <img src="./img/gallery/4.JPG">
-                            <img src="./img/gallery/8.jpg">
-                            <img src="./img/gallery/12.jpeg">
-                            <img src="./img/gallery/20.jpg">
-                            <img src="./img/gallery/24.jpg">
-                            <img src="./img/gallery/28.jpg">
+                            <img src="../img/PersonalPicture.jpg">
+                            <img src="../img/gallery/4.JPG">
+                            <img src="../img/gallery/8.jpg">
+                            <img src="../img/gallery/12.jpeg">
+                            <img src="../img/gallery/20.jpg">
+                            <img src="../img/gallery/24.jpg">
+                            <img src="../img/gallery/28.jpg">
                         </div>
                         <div class="column">
-                            <img src="./img/gallery/1.jpg">
-                            <img src="./img/gallery/5.jpeg">
-                            <img src="./img/gallery/9.jpeg">
-                            <img src="./img/gallery/13.jpeg">
-                            <img src="./img/gallery/17.jpg">
-                            <img src="./img/gallery/21.jpg">
-                            <img src="./img/gallery/25.jpg">
+                            <img src="../img/gallery/1.jpg">
+                            <img src="../img/gallery/5.jpeg">
+                            <img src="../img/gallery/9.jpeg">
+                            <img src="../img/gallery/13.jpeg">
+                            <img src="../img/gallery/17.jpg">
+                            <img src="../img/gallery/21.jpg">
+                            <img src="../img/gallery/25.jpg">
                         </div>
                         <div class="column">
-                            <img src="./img/gallery/2.jpg">
-                            <img src="./img/gallery/6.jpeg">
-                            <img src="./img/gallery/10.jpeg">
-                            <img src="./img/gallery/14.png">
-                            <img src="./img/gallery/16.jpg">
-                            <img src="./img/gallery/18.jpeg">
-                            <img src="./img/gallery/22.jpg">
-                            <img src="./img/gallery/26.jpg">
-                            <img src="./img/gallery/30.jpg">
+                            <img src="../img/gallery/2.jpg">
+                            <img src="../img/gallery/6.jpeg">
+                            <img src="../img/gallery/10.jpeg">
+                            <img src="../img/gallery/14.png">
+                            <img src="../img/gallery/16.jpg">
+                            <img src="../img/gallery/18.jpeg">
+                            <img src="../img/gallery/22.jpg">
+                            <img src="../img/gallery/26.jpg">
+                            <img src="../img/gallery/30.jpg">
                         </div>
                         <div class="column">
-                            <img src="./img/gallery/3.jpeg">
-                            <img src="./img/gallery/7.jpeg">
-                            <img src="./img/gallery/11.jpeg">
-                            <img src="./img/gallery/15.jpg">
-                            <img src="./img/gallery/19.jpg">
-                            <img src="./img/gallery/23.jpg">
-                            <img src="./img/gallery/27.jpg">
-                            <img src="./img/gallery/31.jpg">
+                            <img src="../img/gallery/3.jpeg">
+                            <img src="../img/gallery/7.jpeg">
+                            <img src="../img/gallery/11.jpeg">
+                            <img src="../img/gallery/15.jpg">
+                            <img src="../img/gallery/19.jpg">
+                            <img src="../img/gallery/23.jpg">
+                            <img src="../img/gallery/27.jpg">
+                            <img src="../img/gallery/31.jpg">
                         </div>
                     </div>
                 </div>
@@ -258,7 +253,7 @@
             <div class="bottomBar">
                 <center>
                     <div onclick="aboutMenu('gallery','main')" class="minecraftButton" style="margin-top:70px">
-                        <img class="menuButton" src="./img/MinecraftHalfButton.JPG" />
+                        <img class="menuButton" src="../img/MinecraftHalfButton.JPG" />
                         <p class="centered">Back</p>
                     </div>
                 </center>

@@ -3,20 +3,21 @@
 
 @font-face {
     font-family: Minecraft;
-    src:url(Minecraft.otf) format('opentype');
+    src:url(../fonts/Minecraft.otf) format('opentype');
 }
 @font-face {
     font-family: Archive;
-    src:url(Archive-Regular.otf) format('opentype');
+    src:url(../fonts/Archive-Regular.otf) format('opentype');
 }
 @font-face {
     font-family: Colorado;
-    src:url(NHLCOLOR.TTF) format('truetype');
+    src:url(../fonts/NHLCOLOR.TTF) format('truetype');
 }
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 body {
     margin:0;
     padding:0;
+    overflow-x: hidden;
 }
 
 /*GENERAL*/
@@ -33,6 +34,14 @@ body {
 .noLinkFormat {
     color:black;
     text-decoration:none;
+}
+iframe[seamless] {
+    border: none;
+}
+@media screen and (max-width:800px) {
+    h1{
+        font-size: 30px !important;
+    }
 }
 
 /*NAVBAR*/
@@ -65,6 +74,7 @@ body {
     top: 0;
     opacity: 0;
     transition: .5s;
+    pointer-events: none;
 }
  .subMenu{
     opacity: .1;
@@ -78,13 +88,13 @@ body {
 }
  .subMenuBottom {
     margin-top: calc(2em + 55px);
-    font-size: 15px !important;
  }
 .navBar ul li span:hover a {
     transform: scale(2);
     opacity: 1;
     filter: blur(0);
     pointer-events: all;
+    color:white;
 }
 .navBar ul li a{
     display:block;
@@ -160,19 +170,37 @@ body {
     }
     .subMenuBottom {
         margin-top: calc(2em + 35px);
-        font-size: 40% !important;
     }
 }
 
 /*FOOTER*/
 
-footer {
+/*footer {
     position: fixed;
     bottom: 0;
     background-color: #336699;
-    color:black;
+    color:white;
     width:100%;
     text-align: center;
+    z-index:97;
+    padding: 1px 0;
+    font-family: 'Roboto', sans-serif;
+}*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #336699;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.5rem;
+    z-index:97;
+}
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
 /*HOME PAGE*/
@@ -187,7 +215,7 @@ footer {
     background-size: cover;
     margin: 0;
 }
-main svg{
+.home svg{
     min-width:320px;
     max-width:600px;
     min-height:80px;
@@ -199,7 +227,7 @@ main svg{
 .about {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(217,217,217,.3),rgba(217,217,217,.3)),url(./img/MinecraftBackground.png);
+    background-image: linear-gradient(rgba(217,217,217,.3),rgba(217,217,217,.3)),url(../img/MinecraftBackground.png);
     background-size: cover;
     position: absolute;
     top: 0;
@@ -282,7 +310,7 @@ main svg{
    
 }
 .subAbout .topBar{
-    background-image:url(./img/AboutTopBar.JPG);
+    background-image:url(../img/AboutTopBar.JPG);
     position:fixed;
     top:0;
     background-repeat:repeat-x;
@@ -292,7 +320,7 @@ main svg{
     z-index:5;
 }
 .subAbout .bottomBar {
-    background-image: url(./img/AboutBottomBar.JPG);
+    background-image: url(../img/AboutBottomBar.JPG);
     position: fixed;
     bottom: 0;
     background-repeat: repeat-x;
@@ -310,7 +338,7 @@ main svg{
     left:0;
     right:0;
     bottom:0;
-    background-image: url(./img/AboutBackground.JPG);
+    background-image: url(../img/AboutBackground.JPG);
 }
 .subAbout .content {
     overflow-y:scroll;
@@ -401,21 +429,24 @@ main svg{
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, auto)); /* see notes below */
+    grid-template-columns: repeat(auto-fill, minmax(230px, auto)); /* see notes below */
     grid-auto-rows: minmax(350px, auto);
     grid-gap: 1rem;
+    padding-bottom: 70px;
 }
-.card {
-    /*height: 200px;*/
-    /*background: red;*/
+.card-img-top {
+    height: -webkit-fill-available;
+}
+.card-body {
+    padding: 1rem 1rem 2rem 1rem !important;
+}
+/*.card {
     border: 2px solid #e7e7e7;
     border-radius: 4px;
     padding: .5rem;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
     display: flex;
-    /* -webkit-box-orient: vertical; */
-    /* -webkit-box-direction: normal; */
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
@@ -425,6 +456,7 @@ main svg{
     background-repeat:round;
     max-width: 300px;
 }
+
 .card * {
     margin:0;
     padding:0;
@@ -450,7 +482,7 @@ main svg{
     text-align:center;
     display:flex;
     flex-direction: row;
-    background-image: url(./img/overlay.svg);
+    background-image: url(../img/overlay.svg);
     background-position: 50% 50%;
     background-size: 160px;
     background-color: transparent;
@@ -482,16 +514,16 @@ main svg{
 }
 .infoCircle h3 {
     color: #b1b3b6;
-}
+}*/
 
 /*PROJECT PAGES*/
 
-.row {
+.main {
     margin-left:auto;
     margin-right:auto;
 }
 @media screen and (min-width: 670px) {
-    .row {
+    .main {
         max-width: 1300px;
     }
 }
@@ -540,7 +572,7 @@ main svg{
     background-size: 12px 12px;
     background-repeat: no-repeat;
     padding-bottom: 5px;
-    background-image: url(img/bullet-square.svg);
+    background-image: url(../img/bullet-square.svg);
 }
 .awards p {
     padding:0;
@@ -578,42 +610,30 @@ main svg{
     width: 100vw;
     background: #FFF;
 }
-
-
-
+.form-container {
+    padding: 2.5%;
+}
+.contact main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
 .contactCard {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 200px;
-    overflow: hidden;
+    margin: 10px 5%;
+    width: 90%;
     background-color: #FFFFFF;
-    border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     text-align: center;
-    -webkit-transition: .1s ease-in-out;
-    transition: .1s ease-in-out;
-}
-.contactCard:first-of-type {
-    margin-right: 25px;
-}
-
-.contactCard:hover {
-    margin-top: -10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .banner {
     height: 100px;
     width: 100%;
     padding-top: 30px;
-    background-color: #FAFAFA;
+    background-color: #edecec;
     background-size: cover;
     background-position: center;
     box-sizing:border-box;
+    border-radius: 15px 15px 0 0;
 }
 
 .avatar {
@@ -627,7 +647,7 @@ main svg{
     
 }
 .contactCard .avatar{
-	background-image: url("./img/PersonalPicture.jpg");
+	background-image: url("../img/PersonalPicture.jpeg");
 }
  
 .contactCard h3, a, i{
@@ -652,13 +672,13 @@ main svg{
 	text-decoration: none;
 }
 .contactCard a:hover{
-	background-color: #FAFAFA;
+	background-color: #edecec;
 	color: inherit;
 }
 .contactCard ul {
 	margin-top: 10px;
 	padding: 15px 0px;
-	background-color: #FAFAFA;
+	background-color: #edecec;
 }
 .contactCard ul a{
 	display: inline;

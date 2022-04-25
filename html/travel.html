@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <!--DEVELOPER: Anthony Caruso, IS117-102, Spring 2022-->
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="../extra/jVectorMap/jquery-jvectormap-2.0.5.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="../extra/jVectorMap/jquery-jvectormap-2.0.5.min.js"></script>
+
+        <!--- World SVG Path Info file in jVectorMap supported format-->
+        <script src="../extra/jVectorMap/jquery-jvectormap-world-mill-en.js"></script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../extra/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../extra/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../extra/favicon/favicon-16x16.png">
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/home.css" />
+        <script type="text/javascript" src="../js/main.js"></script>
+        <meta charset="utf-8" />
+        <title>Travels</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+              crossorigin="anonymous">
+    </head>
+    <body onload="loaded()" style="background-color: rgb(80, 80, 80);overflow-x:hidden;overflow-y:hidden">
+
+        <header>
+            <div class="transition" id="transition"></div>
+            <div class="transition" id="transition2" style="clip-path:circle(150% at 100% 100%); opacity:1;"></div>
+            <div class="navBar">
+                <ul onmouseover="navBlur(true)" onmouseout="navBlur(false)">
+                    <li><a href="javascript:delay('../index.html')">Home</a></li>
+                    <li><a href="javascript:delay('about.html')">About</a></li>
+                    <li><a href="javascript:delay('#')">Travels</a></li>
+                    <li>
+                    <span>
+                        <a href="javascript:delay('projects.html')">Projects</a>
+                        <a class="subMenu" target="_blank" href="../extra/AnthonyCaruso.pdf">Resume</a>
+                        <a class="subMenu subMenuBottom" target="_blank" href="https://github.com/antc3519">GitHub</a>
+                    </span>
+                    </li>
+                    <li><a href="javascript:delay('contacts.html')">Contacts</a></li>
+                </ul>
+                <span id="shadow"></span>
+            </div>
+        </header>
+        <main>
+            <div class="container" style="position: fixed;top: 0;width: 100vw;max-width: initial;height: 100vh;padding-top: 90px;padding-bottom: 90px;box-sizing: border-box;">
+                <div id="world-map" style="width: 90%;height: 100%;margin: auto; border: 5px solid white"></div>
+            </div>
+        </main>
+        <footer class="footer page-footer font-small ">
+            <div class="container">
+                <div class="row">
+                    <span>&copy; Anthony Caruso, 2022 | <a href="#">Terms of Service</a> | <a href="#">Privacy Statement</a></span>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            $(function () {
+
+                var points = [
+                    { latLng: [42.1, 12.5], name: 'Vatican City', status: 'marker' },
+                    { latLng: [55.8, 13.0], name: 'Malmo', status: 'marker' },
+                    { latLng: [52.7, 13.4], name: 'Berlin', status: 'marker' },
+                    { latLng: [45.6, 12.3], name: 'Venice', status: 'marker' },
+                    { latLng: [42.1, 12.5], name: 'Rome', status: 'marker' },
+                    { latLng: [55.9, 12.6], name: 'Copenhagen', status: 'marker' },
+                    { latLng: [49.1, 2.4], name: 'Paris', status: 'marker' },
+                    { latLng: [44.0, 11.3], name: 'Florence', status: 'marker' },
+                    { latLng: [-22.7, - 43.2], name: 'Rio De Janeiro', status: 'marker' },
+                    { latLng: [49.8, 6.1], name: 'Luxembourg', status: 'marker' },
+                    { latLng: [43.3, -79.0], name: 'Niagara Falls', status: 'marker' },
+                    { latLng: [42.6, -71.1], name: 'Boston', status: 'marker' },
+                    { latLng: [40.2, -75.2], name: 'Philadelphia', status: 'marker' },
+                    { latLng: [40.9, -74], name: 'New York City', status: 'marker' },
+                    { latLng: [41.7, -81.7], name: 'Cleveland', status: 'marker' },
+                    { latLng: [39.3, -84.5], name: 'Cincinnati', status: 'marker' },
+                    { latLng: [36.0, -83.6], name: 'Pidgeon Forge', status: 'marker' },
+                    { latLng: [36.4, -86.8], name: 'Nashville', status: 'marker' },
+                    { latLng: [35.3, -90], name: 'Memphis', status: 'marker' },
+                    { latLng: [33.0, -96.8], name: 'Dallas', status: 'marker' },
+                    { latLng: [39.1, -77], name: 'Washington D.C.', status: 'marker' },
+                    { latLng: [28.7, -81.4], name: 'Orlando', status: 'marker' },
+                    { latLng: [26.0, -80.2], name: 'Miami', status: 'marker' },
+                    { latLng: [-20.1, -40.3], name: 'Vitoria', status: 'marker' }
+                ];
+
+                $('#world-map').vectorMap({
+                    map: 'world_mill',
+                    markers: points.map(function (h) { return { name: h.name, latLng: h.latLng } }),
+                    series: {
+                        markers: [{
+                            attribute: 'image',
+                            scale: {
+                                'marker': '../img/Travel/marker.png'
+                            },
+                            values: points.reduce(function (p, c, i) { p[i] = c.status; return p }, {}),
+                        }],
+                        regions: [{
+                            scale: {
+                                visited: '#99c2ff',
+                                unvisited: '#f2f2f2'
+                            },
+                            attribute: 'fill',
+                            values: {
+                                "US": 'visited',
+                                "IT": 'visited',
+                                "BR": 'visited',
+                                "FR": 'visited',
+                                "SE": 'visited',
+                                "DK": 'visited',
+                                "DE": 'visited',
+                                "LU": 'visited',
+                                "IT": 'visited',
+                            },
+                            legend: {
+                                horizontal: true,
+                                title: 'Status'
+                            }
+                        }],
+                    },
+                    scaleColors: ['#C8EEFF', '#0071A4'],
+                    normalizeFunction: 'polynomial',
+                    hoverOpacity: 0.7,
+                    hoverColor: false,
+                    markerStyle: {
+                        initial: {
+                            fill: '#F8E23B',
+                            stroke: '#383f47'
+                        }
+                    },
+                    backgroundColor: '#383f47'
+                });
+            });
+        </script>
+    </body>
+</html>

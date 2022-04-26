@@ -225,166 +225,24 @@ footer a {
 /*ABOUT PAGE*/
 
 .about {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(217,217,217,.3),rgba(217,217,217,.3)),url(../img/MinecraftBackground.png);
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: #f5f5f5;
+    text-align: center;
+    margin: auto;
+    max-width: 700px;
+    width:90%;
+    padding-top: 25px;
 }
-.about .title {
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width:548px;
-    position:relative;
+.content {
+    padding: 35px 25px;
 }
-.about .subText {
-    transform:rotate(-10deg);
-    font-family: Minecraft, sans-serif;
-    position:absolute;
-    font-weight:100;
-    width: 300px;
-    animation-name: textPulse;
-    animation-duration: 4s;
-    animation-direction: alternate;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-    text-align:center;
-    text-shadow:3px 3px black;
-    left:40%;
-    top:60%;
-    color:yellow;
-}
-@keyframes textPulse {
-    0% {font-size:1.2em;}
-    100% {font-size: 1.3em;}
-}
-.menuButton {
-    outline: 4px solid black;
-}
-.minecraftButton:hover .menuButton {
-    outline: 4px solid white;
-    cursor:pointer;
-}
-.halfButton {
-    outline: 4px solid black;
-}
-.minecraftButton:hover .halfButton {
-    outline: 4px solid white;
-    cursor:pointer;
-}
-.about section {
-    display: inline-flex;
-    margin-top: 50px;
-}
-
-.about .menu {
-    margin-top: 100px;
-    display:flex;
-    justify-content:center;
-}
-.minecraftButton {
-    width: fit-content;
-    position:relative;
-    margin-bottom:25px;
-}
-.centered{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top:-4px;
-    font-family: Minecraft, sans-serif;
-    color:white;
-    font-size:1.5em;
-    text-shadow:3px 3px black;
-}
-
-
-/*ABOUT EXTENDED PAGES*/
-
-.subAbout{
-    display:none;
-   
-}
-.subAbout .topBar{
-    background-image:url(../img/AboutTopBar.JPG);
-    position:fixed;
-    top:0;
-    background-repeat:repeat-x;
-    background-size:auto;
-    width:100%;
-    height:200px;
-    z-index:5;
-}
-.subAbout .bottomBar {
-    background-image: url(../img/AboutBottomBar.JPG);
-    position: fixed;
-    bottom: 0;
-    background-repeat: repeat-x;
-    background-size: auto;
-    width: 100%;
-    height: 190px;
-    z-index:5;
-}
-.subAbout .container{
-    padding:200px 10% 185px 10%; 
-    display:block;
-    height:auto;
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-image: url(../img/AboutBackground.JPG);
-}
-.subAbout .content {
-    overflow-y:scroll;
-    height:100%;
-    width:100%;
-}
-.infoBox {
-    margin: 10px;
-    text-align:center;
-    font-family: Minecraft, sans-serif;
-    color:grey;
-    margin-bottom: 30px;
-    font-weight:100;
+.content h2 {
+    padding-bottom: 15px;
 }
 .content img {
+    margin: 10px;
     height:10vw;
-    width:10vw;
     min-height:180px;
     min-width:180px;
-}
-.infoBox h1 {
-    margin:0 0 0 10px;
-    font-weight:100;
-}
-.subAbout .content {
-    color:grey;
-    font-family: Minecraft, sans-serif;
-}
-#extra .content img {
-    max-height:300px;
-    width:auto;
-}
-@media screen and (max-height:765px), (max-width:850px) {
-    .about .menu {
-        margin-top: 0;
-    }
-    .menu #ui {
-        transform: scale(.5);
-    }
-    .about .title {
-        transform: scale(.7);
-    }
-
-}
-.menu #ui {
-    position:absolute;
 }
 
 /*GALLERY*/
@@ -420,7 +278,6 @@ footer a {
         max-width: 100%;
     }
 }
-
 
 /*PROJECTS*/
 

@@ -1,3 +1,6 @@
+
+/*DEVELOPER: Anthony Caruso, IS117-102, Spring 2022*/
+
 .home {
     height: 100vh;
     color: white;
@@ -13,4 +16,14 @@
     max-width:600px;
     min-height:80px;
     max-height:150px;
+}
+.extend{
+    padding: 25px 25px 0 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+.card-img-top {
+    object-fit: contain;
+    padding: 30px;
+
 }

@@ -1,4 +1,6 @@
 ﻿
+/*DEVELOPER: Anthony Caruso, IS117-102, Spring 2022*/
+
 /*FONTS*/
 
 @font-face {
@@ -296,6 +298,7 @@ footer a {
 }
 .card-body {
     padding: 1rem 1rem 2rem 1rem !important;
+    text-align: center;
 }
 /*.card {
     border: 2px solid #e7e7e7;
